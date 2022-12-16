@@ -1,0 +1,343 @@
+:root{
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centrado{
+    text-align: center;
+}
+
+h2{
+    padding: 0 25px;
+    margin: 5px;
+}
+
+/* ------------tipografia---------- */
+.titulares{
+    font-size:24px;
+}
+
+.precio{
+    font-size:16px;
+    padding: 5px;
+}
+
+.desc{
+    font-size:14px ;
+    padding: 5px;
+    color:  #39b54a;
+}
+.art{
+    font-size: 14px;
+    display: none;
+    padding: 5px;
+}
+
+.precio-descuento{
+    display: flex;
+}
+
+/* ------- partes del documento------- */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------header------ */
+.main-header{
+    background-color: var(--Amarillo);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.logo{
+    width: 200px;
+}
+
+.barra-de-busqueda{
+    width: 250px;
+    position: relative;
+}
+
+.barra-lupa{
+    position: relative;
+}
+
+.lupa{
+    position: absolute;
+    right: 0;
+    top: 5px
+}
+
+.logo-barra{
+    display: flex;
+    justify-content:space-around;
+}
+
+h2 .compra-en-cuotas{
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.menu-hamburguesa{
+    color: var(--Gris-claro);
+    background-color: var(--Celeste);
+    padding: 15px;
+    display: block;
+    max-width: 50px; 
+    border-radius: 8px;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
+}
+
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.banner{
+    width:100vw;
+    margin-top:10px;
+} 
+
+/* --------main-------*/
+
+main{
+    margin: auto;
+    background-color: #ebebeb;
+    padding: 15px;
+    margin-bottom: 15px;
+} 
+
+.flexbox-articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.articulos{
+    background-color: white;
+    width: 80%;
+    margin: 5px;
+    line-height: 14px;
+    transition: all 450ms;
+} 
+
+.articulos:hover{
+    box-shadow: 0 0 10px rgb(100,100,100);
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.articulos:hover .art{
+    display: block;
+    padding-top: 0,5rem;
+} 
+
+.articulos:hover .fa-truck{
+    transition: transform 2s;
+    transform: rotate(360deg);
+    right: 0px;
+}
+
+.articulos .truck{
+    transition: transform 2s;
+    transform: rotate(360deg);
+    right: 0px;
+}
+
+.caja-articulo{
+    border-top: solid 1px var(--Gris-claro);
+    padding: 15px;
+    position: relative;
+}
+
+
+/* --------formulario registro--------- */
+.h3-formulario{
+    margin-bottom: 5px;
+}
+
+.container-formulario{
+    background-color: var(--Gris-claro);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.display-flex{
+    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.control-formulario input{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 0;
+    padding: 10px;
+}
+
+.control-formulario-fecha{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 0;
+}
+
+.control-date{
+    margin: 0;
+    padding-bottom: 15px; ;
+}
+
+.control-botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.control-botones-login button:hover{
+    background-color: #0022AA;
+}
+
+.control-botones-login button{
+    width: 100%;
+    height: 35px;
+    background-color: var(--Celeste);  
+    color: #ffffff;  
+    cursor: pointer;
+    transition: all 450ms;
+}
+
+.control-botones button{
+    width: 100%;
+    height: 35px;
+    background-color: var(--Celeste);  
+    color: #ffffff;  
+    cursor: pointer;
+}
+
+.control-botones button a{
+    width: 100%;
+    height: 35px;
+    background-color: var(--Celeste);  
+    color: #ffffff;  
+    text-decoration: none;
+}
+
+/* --------footer------- */
+
+.pie-de-pagina{
+    text-align: center;
+}
+
+.pie-de-pagina h3,p{
+    line-height: 22px;
+}
+
+.copyright{
+    text-align: left;
+    font-size: 15px;
+}
+
+.iconos-footer{
+    font-size: 2em;
+    color:var(--Celeste)
+}
+
+.article-footer{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+@media (min-width:361px){
+    .menu-hamburguesa{
+        display: none;
+    }   
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .main-navbar ul{
+        display: flex;
+        justify-content: space-between;       
+        width: 40%;
+        text-align: center;
+    }
+    .articulos{
+        width: 40%;
+        padding: 10px;
+    } 
+    .main-navbar li{
+        margin: 0 2px;     
+    } 
+}
+
+@media(min-width:769px){
+    .main-header-topbar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .compra-en-cuotas{
+        max-width: 350px;
+        text-align: right;
+    }
+    .articulos{
+        width: 20%;
+        padding: 15px;
+    } 
+    .pie-de-pagina{
+        display: flex;
+        justify-content: space-around;
+    }
+    .article-footer{
+        margin: 0 5px;
+    }
+
+
+}
