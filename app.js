@@ -22,5 +22,9 @@ app.get("/login", function(req,res){
     res.sendFile(loginPath);
 });
 
-app.listen(3030,()=> console.log("El servidor http://localhost:3030/ esta corriendo"));
+const port = process.env.PORT || 3030
+
+app.listen(port,()=> 
+    console.log("El servidor http://localhost:"+port+" esta corriendo")
+);
 
